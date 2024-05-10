@@ -1,1 +1,3 @@
 example-pipeline/datasets/*
+example-pipeline/models/*
+.DS_Store
