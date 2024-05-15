@@ -29,16 +29,13 @@ We train a multimodal diffusion model with the edge mask and the caption as inpu
 ## Usage
 
 ### Download Dataset
-
-1. Download the MS COCO 330k dataset from Hugging Face or some subset of it.
+Download the MS COCO 330k dataset from Hugging Face or some subset of it.
 
 ### Create Dataset
-
-1. Run the notebook `example-pipeline/create-dataset.ipynb` to create the dataset.
+Run the notebook `example-pipeline/create-dataset.ipynb` to create the dataset.
 
 ### Train Model
-
-1. Run the notebook `example-pipeline/training.ipynb` to train a model.
+Run the notebook `example-pipeline/training.ipynb` to train a model.
 
 ### Workflow
 
