@@ -1,7 +1,3 @@
-# CV-FinalProject
-
-**Final project for 6.8301 Advances in Computer Vision**
-
 ## Project Overview
 
 This project aims to create an image compression tool that leverages both computer vision and natural language processing techniques. The core idea is to compress images by generating an edge mask using the Canny edge detection algorithm and a descriptive caption using GPT-4. These two components are then used to train a multimodal diffusion model to recover the original image.
