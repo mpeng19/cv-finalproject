@@ -16,8 +16,8 @@ model = MyModel().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 train_loader = ...  # Your training DataLoader
 valid_loader = ...  # Your validation DataLoader
-config = {'epochs': 10}  # Example configuration
-T = 1000  # Total timesteps
+config = {'epochs': 10}
+T = 1000
 
 # Training Loop
 for epoch in range(config['epochs']):
@@ -37,16 +37,13 @@ for epoch in range(config['epochs']):
         noised_images = model.forward_pass(m, m_rgb, captions, t)
         recovered_images = model.reverse_pass(noised_images, m, t)
 
-        # Calculate loss
         loss = model.diffusion_loss((noised_images - images), (noised_images - recovered_images))
         train_loss += loss.item()
 
-        # Backpropagation
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
 
-    # Save checkpoint
     checkpoint_path = f'checkpoints/epoch_{epoch}_checkpoint.pth'
     torch.save(model.state_dict(), checkpoint_path)
 ```
